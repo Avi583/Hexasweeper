@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hexasweeper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hive">
+
+  <header class="hive-header">
+    <h1><span class="hex-icon" aria-hidden="true">⬡</span> Hexasweeper</h1>
+    <p class="tagline">Clear the comb. Every cell hides 0&ndash;6 neighbors.</p>
+  </header>
+
+  <div class="panel" role="toolbar" aria-label="Game controls">
+    <div class="counter" id="mine-counter" aria-label="Mines remaining">010</div>
+
+    <button id="restart-btn" class="face-btn" aria-label="Restart game" title="Restart">🙂</button>
+
+    <div class="counter" id="timer" aria-label="Elapsed time">000</div>
+
+    <select id="difficulty" aria-label="Difficulty">
+      <option value="beginner">Beginner · 9×9 · 10</option>
+      <option value="intermediate">Intermediate · 13×11 · 25</option>
+      <option value="expert">Expert · 17×15 · 55</option>
+      <option value="custom">Custom&hellip;</option>
+    </select>
+  </div>
+
+  <div class="custom-panel" id="custom-panel" hidden>
+    <label>Cols <input type="number" id="custom-cols" min="4" max="30" value="9"></label>
+    <label>Rows <input type="number" id="custom-rows" min="4" max="30" value="9"></label>
+    <label>Mines <input type="number" id="custom-mines" min="1" max="500" value="10"></label>
+    <button id="custom-apply" class="apply-btn">Apply</button>
+  </div>
+
+  <div class="board-wrap">
+    <div class="board-scroll" id="board-scroll">
+      <svg id="board" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+  </div>
+
+  <p class="hint">Left click to reveal &middot; Right click to flag &middot; Double‑click a revealed number to chord</p>
+
+  <footer class="hive-footer">
+    <a href="https://github.com" target="_blank" rel="noopener">Hexasweeper</a> &mdash; open source, MIT licensed.
+  </footer>
+
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="script.js"></script>
+</body>
+</html>
