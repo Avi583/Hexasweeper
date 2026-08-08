@@ -159,6 +159,10 @@ function renderBoard() {
       poly.addEventListener("click", () => onLeftClick(c, r));
       poly.addEventListener("dblclick", (e) => { e.preventDefault(); onChord(c, r); });
       poly.addEventListener("contextmenu", (e) => { e.preventDefault(); onRightClick(c, r); });
+      poly.addEventListener("mousedown", (e) => { if (e.button === 1) e.preventDefault(); });
+      poly.addEventListener("auxclick", (e) => {
+        if (e.button === 1) { e.preventDefault(); onChord(c, r); }
+      });
 
       boardSvg.appendChild(poly);
 

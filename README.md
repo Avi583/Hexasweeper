@@ -18,7 +18,7 @@ python3 -m http.server 8000
 
 - **Left click** a hex to reveal it.
 - **Right click** to flag/unflag a suspected mine.
-- **Double‑click** a revealed number to "chord" — auto‑reveal its unflagged neighbors, if you've flagged exactly as many neighbors as the number shows.
+- **Double‑click** (or **middle‑click** / mouse‑wheel‑click) a revealed number to "chord" — auto‑reveal its unflagged neighbors, if you've flagged exactly as many neighbors as the number shows.
 - A revealed cell shows a number **0–6**: how many of its (up to six) neighboring hexes contain mines. Blank cells (0) auto‑flood‑reveal their neighbors.
 - Clear every non‑mine cell to win. Hit a mine and the hive goes boom.
 - The very first click is always safe — mines are placed after your first click, avoiding that cell and its immediate neighbors.
