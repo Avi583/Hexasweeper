@@ -290,7 +290,7 @@ function checkWin() {
 function endGame(won) {
   gameOver = true;
   clearInterval(timerHandle);
-  restartBtn.textContent = won ? "😎" : "💥";
+  restartBtn.textContent = won ? "🐝" : "💥";
 
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
