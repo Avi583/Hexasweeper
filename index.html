@@ -4,17 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hexasweeper</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="Images/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="Images/android-chrome-512x512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="layout">
+
+  <aside class="sidebar" aria-label="How to play">
+    <h2 class="sidebar-title">How to Play</h2>
+    <ul class="howto-list">
+      <li><strong>Left click</strong> a hex to reveal it.</li>
+      <li><strong>Right click</strong> to flag or unflag a suspected mine.</li>
+      <li><strong>Double‑click</strong> a revealed number to chord — auto‑reveal its unflagged neighbors once you've flagged exactly that many.</li>
+      <li>Each revealed cell shows a number <strong>0–6</strong>: how many of its neighboring hexes hide mines. Blank cells auto‑flood‑reveal their neighbors.</li>
+      <li>Clear every non‑mine cell to win. Hit a mine and the hive goes boom.</li>
+      <li>Your first click is always safe — mines are placed afterward, avoiding that cell and its neighbors.</li>
+    </ul>
+  </aside>
 
 <div class="hive">
 
@@ -56,6 +70,8 @@
   <footer class="hive-footer">
     <a href="https://github.com/Avi583/Hexasweeper/" target="_blank" rel="noopener">Hexasweeper</a> &mdash; open source, GPL 3.0 licensed.
   </footer>
+
+</div>
 
 </div>
 

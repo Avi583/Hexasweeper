@@ -36,10 +36,19 @@ Neighbor lookups (used for both mine counting and flood-fill reveal) convert eac
 
 ```
 hexasweeper/
-├── index.html   # markup & game shell
-├── style.css    # honeycomb visual theme
-├── script.js    # grid math, mine logic, rendering, game state
-└── README.md
+├── index.html          # markup & game shell
+├── style.css           # honeycomb visual theme
+├── script.js           # grid math, mine logic, rendering, game state
+├── site.webmanifest    # PWA metadata & icon references
+├── LICENSE
+├── README.md
+└── Images/
+    ├── favicon.ico
+    ├── favicon-16x16.png
+    ├── favicon-32x32.png
+    ├── apple-touch-icon.png
+    ├── android-chrome-192x192.png
+    └── android-chrome-512x512.png
 ```
 
 ## License
