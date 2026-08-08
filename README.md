@@ -6,13 +6,7 @@ Built with plain HTML, CSS, and JavaScript. No build step, no dependencies — j
 
 ## Play
 
-Open `index.html` directly in your browser, or serve the folder locally:
-
-```bash
-npx serve .
-# or
-python3 -m http.server 8000
-```
+Click Link Here to Play on Web: https://avi583.github.io/Hexasweeper/
 
 ## How to play
 
