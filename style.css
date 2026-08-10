@@ -38,28 +38,22 @@ html, body {
 }
 
 .layout {
-  display: grid;
-  grid-template-columns: 240px minmax(0, 920px);
-  grid-template-areas:
-    "header header"
-    ".      panel"
-    ".      custom"
-    "sidebar board"
-    "sidebar hint"
-    ".      footer";
-  column-gap: 24px;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 24px;
   max-width: 1240px;
   margin: 0 auto;
 }
 
 .sidebar {
-  grid-area: sidebar;
+  flex: 0 0 240px;
   background: var(--panel);
   border: 1px solid var(--panel-edge);
   border-radius: var(--radius);
   padding: 18px 18px 20px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.03);
+  align-self: center;
 }
 
 .sidebar-title {
@@ -82,8 +76,15 @@ html, body {
 }
 .howto-list strong { color: var(--cream); }
 
+.hive {
+  width: 100%;
+  max-width: 920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hive-header {
-  grid-area: header;
   text-align: center;
   margin-bottom: 18px;
 }
@@ -111,8 +112,6 @@ html, body {
 }
 
 .panel {
-  grid-area: panel;
-  justify-self: center;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -172,8 +171,6 @@ select, .apply-btn {
 }
 
 .custom-panel {
-  grid-area: custom;
-  justify-self: center;
   display: flex;
   gap: 14px;
   align-items: center;
@@ -199,8 +196,6 @@ select, .apply-btn {
 .apply-btn:hover { filter: brightness(1.15); }
 
 .board-wrap {
-  grid-area: board;
-  justify-self: center;
   background: linear-gradient(180deg, #120E0A, #0E0B08);
   border: 1px solid var(--panel-edge);
   border-radius: 18px;
@@ -272,8 +267,6 @@ select, .apply-btn {
 .hex-emoji.pop, .hex-label.pop { animation: pop 0.15s ease-out; transform-box: fill-box; transform-origin: center; }
 
 .hint {
-  grid-area: hint;
-  justify-self: center;
   color: var(--cream-dim);
   font-size: 0.82rem;
   margin: 14px 0 4px;
@@ -281,8 +274,6 @@ select, .apply-btn {
 }
 
 .hive-footer {
-  grid-area: footer;
-  justify-self: center;
   margin-top: 18px;
   font-size: 0.78rem;
   color: var(--cream-dim);
@@ -307,19 +298,8 @@ select, .apply-btn {
 }
 
 @media (max-width: 900px) {
-  .layout {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "sidebar"
-      "header"
-      "panel"
-      "custom"
-      "board"
-      "hint"
-      "footer";
-    justify-items: center;
-  }
-  .sidebar { width: 100%; max-width: 500px; }
+  .layout { flex-direction: column; align-items: center; }
+  .sidebar { flex: none; width: 100%; max-width: 500px; position: static; }
 }
 
 @media (max-width: 480px) {
