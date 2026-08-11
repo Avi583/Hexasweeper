@@ -24,7 +24,7 @@
     <h2 class="sidebar-title">How to Play</h2>
     <ul class="howto-list">
       <li><strong>Left click</strong> a hex to reveal it.</li>
-      <li><strong>Right click</strong> to flag or unflag a suspected mine.</li>
+      <li><strong>Right click</strong> to flag or unflag a suspected mine. Or tick <strong>Flag mode</strong> to make left click flag/unflag instead of revealing &mdash; handy on touch devices.</li>
       <li><strong>Double‑click</strong> a revealed number to chord — auto‑reveal its unflagged neighbors once you've flagged exactly that many.</li>
       <li>Each revealed cell shows a number <strong>0–6</strong>: how many of its neighboring hexes hide mines. Blank cells auto‑flood‑reveal their neighbors.</li>
       <li>Clear every non‑mine cell to win. Hit a mine and the hive goes boom.</li>
@@ -45,6 +45,11 @@
     <button id="restart-btn" class="face-btn" aria-label="Restart game" title="Restart">🙂</button>
 
     <div class="counter" id="timer" aria-label="Elapsed time">000</div>
+
+    <label class="flag-toggle" for="flag-mode" title="When on, left click flags instead of revealing">
+      <input type="checkbox" id="flag-mode" aria-label="Flag mode: left click flags instead of revealing">
+      <span>🚩 Flag mode</span>
+    </label>
 
     <select id="difficulty" aria-label="Difficulty">
       <option value="beginner">Beginner · 9×9 · 10</option>
@@ -67,7 +72,7 @@
     </div>
   </div>
 
-  <p class="hint">Left click to reveal &middot; Right click to flag &middot; Double‑click a revealed number to chord</p>
+  <p class="hint">Left click to reveal &middot; Right click to flag &middot; Double‑click a revealed number to chord &middot; Tick Flag mode to make left click flag instead</p>
 
   <footer class="hive-footer">
     <a href="https://github.com/Avi583/Hexasweeper/" target="_blank" rel="noopener">Hexasweeper</a> &mdash; open source, GPL 3.0 licensed.

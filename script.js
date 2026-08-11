@@ -76,6 +76,7 @@ const difficultySel = document.getElementById("difficulty");
 const customPanel = document.getElementById("custom-panel");
 const customApply = document.getElementById("custom-apply");
 const toastEl = document.getElementById("toast");
+const flagModeCheckbox = document.getElementById("flag-mode");
 
 function key(col, row) { return `${col},${row}`; }
 
@@ -221,6 +222,12 @@ function updateCellVisual(c, r) {
 // ---- game actions ----
 function onLeftClick(c, r) {
   if (gameOver) return;
+
+  if (flagModeCheckbox && flagModeCheckbox.checked) {
+    onRightClick(c, r);
+    return;
+  }
+
   const cell = grid[r][c];
   if (cell.flagged || cell.revealed) return;
 

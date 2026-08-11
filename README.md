@@ -32,7 +32,7 @@ Once installed, the app is cached by a service worker, so it continues to work w
 ## How to play
 
 - **Left click** a hex to reveal it.
-- **Right click** to flag/unflag a suspected mine.
+- **Right click** to flag/unflag a suspected mine. Prefer left click for everything? Tick the **Flag mode** checkbox in the toolbar and left click will flag/unflag instead of revealing — handy on touch devices with no right‑click.
 - **Double‑click** a revealed number to "chord" — auto‑reveal its unflagged neighbors, if you've flagged exactly as many neighbors as the number shows.
 - A revealed cell shows a number **0–6**: how many of its (up to six) neighboring hexes contain mines. Blank cells (0) auto‑flood‑reveal their neighbors.
 - Clear every non‑mine cell to win. Hit a mine and the hive goes boom.

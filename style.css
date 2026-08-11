@@ -160,6 +160,25 @@ html, body {
   outline-offset: 2px;
 }
 
+.flag-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--cream-dim);
+  cursor: pointer;
+  user-select: none;
+}
+.flag-toggle input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--comb-top);
+  cursor: pointer;
+}
+.flag-toggle:has(input:checked) {
+  color: var(--comb-top);
+}
+
 select, .apply-btn {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
