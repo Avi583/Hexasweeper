@@ -8,6 +8,27 @@ Built with plain HTML, CSS, and JavaScript. No build step, no dependencies — j
 
 Click Link Here to Play on Web: https://avi583.github.io/Hexasweeper/
 
+## Install as an app
+
+Hexasweeper is a installable Progressive Web App (PWA) — it works fully offline once installed and launches like a native app, no browser chrome.
+
+**Desktop (Chrome / Edge):**
+1. Visit https://avi583.github.io/Hexasweeper/
+2. Click the install icon in the address bar (or the three‑dot menu → *Cast, save, and share* → *Install page as app*).
+3. Confirm — Hexasweeper is added to your Start Menu / Applications folder and opens in its own window from then on.
+
+**Android (Chrome):**
+1. Visit the site.
+2. Tap the three‑dot menu → *Add to Home screen* → *Install*.
+
+**iOS (Safari):**
+1. Visit the site.
+2. Tap the Share icon → *Add to Home Screen*.
+
+Once installed, the app is cached by a service worker, so it continues to work without an internet connection.
+
+> **Updating an install:** if you've installed an older version of the app and it shows a 404 or stale content after an update, uninstall it (`chrome://apps` → right‑click → *Remove*), open the site fresh in a browser tab, unregister the old service worker and clear site data (DevTools → *Application* → *Service Workers* / *Storage*), then reinstall.
+
 ## How to play
 
 - **Left click** a hex to reveal it.
@@ -40,6 +61,7 @@ hexasweeper/
 ├── style.css           # honeycomb visual theme
 ├── script.js           # grid math, mine logic, rendering, game state
 ├── site.webmanifest    # PWA metadata & icon references
+├── sw.js                # service worker — caches the app shell for offline play
 ├── LICENSE
 ├── README.md
 └── Images/
